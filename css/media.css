@@ -1,0 +1,891 @@
+/* 1400 > 1200 */
+
+@media (max-width: 1399.98px) {
+  .telegram-cards-wrapper {
+    margin-top: 70px;
+    margin-bottom: 40px;
+  }
+
+  .attachment-img-wrapper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .attachment-img {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+/* 1200 > 992 */
+
+@media (max-width: 1199.98px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .city-selection {
+    margin-right: 15px;
+  }
+
+  .like-btn {
+    margin-right: 15px;
+  }
+
+  .btn-input {
+    margin-right: 15px;
+  }
+
+  .rent-price-sum-green {
+    font-size: 30px;
+  }
+
+  .popular-card-body .card-text {
+    font-size: 16px;
+    line-height: 24px;
+    min-height: 48px;
+  }
+}
+
+/* 992 > 768 */
+
+@media (max-width: 991.98px) {
+  .navbar-light .navbar-toggler {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    background: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: none;
+    border-radius: 0;
+  }
+
+  .navbar-toggler.collapsed .lang-wrapper {
+    display: none;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-toggler:not(.collapsed) .lang-wrapper {
+    display: block;
+    margin-left: auto;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-toggler.collapsed .navbar-brand {
+    display: flex;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-toggler:not(.collapsed) .navbar-brand {
+    display: none;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-toggler.collapsed .like-btn {
+    display: flex;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-toggler:not(.collapsed) .like-btn {
+    display: none;
+    transition: all .5s ease-in-out;
+  }
+
+  .navbar-brand {
+    margin-right: auto;
+    margin-left: calc(40% - 21px);
+  }
+
+  .navbar-collapse.show {
+    min-height: 100vh;
+    transition: .3s cubic-bezier(0.97, 0.67, 1, 1);
+    background: #fff;
+    width: 100%;
+  }
+
+  .like-btn {
+    margin-right: 0;
+  }
+
+  .btn-burger {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-34%);
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+  }
+
+  .btn-burger:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .btn-burger span,
+  .btn-burger span:before,
+  .btn-burger span:after {
+    width: 30px;
+    position: absolute;
+    left: 0;
+    height: 1px;
+    background: #121111;
+    display: block;
+    transition: .3s;
+    border-radius: 5px;
+  }
+
+  .btn-burger span::before {
+    content: "";
+    top: -10px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .btn-burger span {
+    top: 10px;
+  }
+
+  .btn-burger span::after {
+    content: "";
+    bottom: -10px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .btn-burger span.active:before {
+    content: "";
+    top: 0px;
+    transform: rotate(45deg);
+    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .btn-burger span.active:after {
+    content: "";
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .btn-burger span.active {
+    background: rgba(255, 255, 255, 0);
+  }
+
+  .navbar-collapse {
+    position: fixed;
+    top: 62px;
+    z-index: 1020;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-input {
+    order: 0;
+  }
+
+  .city-selection {
+    order: 1;
+  }
+
+  .navbar-nav {
+    order: 2;
+    width: 100%;
+  }
+
+  .btn-input {
+    background: url(../img/input-icon.png) no-repeat 20px center,
+      linear-gradient(#f2f2f2, #f2f2f2);
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    padding-left: 39px;
+    font-size: 16px;
+    line-height: 24px;
+    color: #121111;
+    width: 100%;
+    text-align: left;
+  }
+
+  .btn-input:hover,
+  .btn-input:focus {
+    background: #F2F2F2;
+    color: #121111;
+    border: none;
+  }
+
+  .city-selection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    padding-left: 39px;
+    font-size: 16px;
+    line-height: 20px;
+    color: #121111;
+    width: 100%;
+    text-align: left;
+    background-position: 20px center;
+  }
+
+  .city-selection:hover,
+  .city-selection:focus {
+    color: #121111;
+    border: none;
+  }
+
+  .city-selection::after {
+    content: '';
+    display: flex;
+    width: 95%;
+    height: 1px;
+    background: rgba(18, 17, 17, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .city-selection-btn {
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+    font-size: 14px;
+    line-height: 20px;
+    text-decoration-line: underline;
+    color: #22A720;
+  }
+
+  .navbar-light .navbar-nav .nav-link {
+    font-size: 16px;
+    line-height: 24px;
+    color: #121111;
+    text-align: left;
+  }
+
+  .navbar-expand-lg .navbar-nav .nav-link {
+    position: relative;
+    border: none;
+    border-radius: 0;
+    padding: 20px;
+    width: 100%;
+  }
+
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link:focus {
+    color: #121111;
+    border: none;
+  }
+
+  .navbar-light .navbar-nav .nav-link.active,
+  .navbar-light .navbar-nav .show>.nav-link {
+    color: #121111;
+  }
+
+  .nav-link::after {
+    content: '';
+    display: flex;
+    width: 95%;
+    height: 1px;
+    background: rgba(18, 17, 17, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .search-rent {
+    flex-direction: column;
+    background: transparent;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 720px;
+  }
+
+  .search-rent .select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .select-housing {
+    z-index: 1010;
+  }
+
+  .search-rent .form-select {
+    border: none;
+    max-width: 100%;
+    min-width: 100%;
+    background-position: 670px center;
+  }
+
+  .select__dropdown {
+    z-index: 1010;
+  }
+
+  .select_show .select__dropdown {
+    z-index: 1010;
+  }
+
+  .rooms-checks {
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: #fff;
+    border-radius: 6px;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .rooms-checks .form-check {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .rooms-checks .btn-check-label {
+    text-align: center;
+    width: 100%;
+  }
+
+  .btn-check:active+.btn-check-label-studio,
+  .btn-check:checked+.btn-check-label-studio,
+  .btn-check-label-studio.active,
+  .btn-check-label-studio:active {
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .btn-check:active+.btn-check-label-four,
+  .btn-check:checked+.btn-check-label-four,
+  .btn-check-label-four.active,
+  .btn-check-label-four:active {
+    border-radius: 0px 6px 6px 0px;
+  }
+
+  .form-price-wrapper {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .form-price-title {
+    font-size: 14px;
+    line-height: 13px;
+    padding: 15px 20px;
+  }
+
+  .form-price-line {
+    display: block;
+    font-size: 18px;
+    line-height: 18px;
+    color: #E6E6E6;
+  }
+
+  .form-price-wrapper .select {
+    margin-bottom: 0;
+  }
+
+  .form-price-wrapper .form-select {
+    background-position: 280px center;
+  }
+
+  .search-rent .form-control {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+
+  .btn-search-rent {
+    padding: 13px 140px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+  .principle-item {
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 50px;
+  }
+
+  .principle-item-four {
+    margin-bottom: 0px;
+  }
+
+  .benefit {
+    padding-bottom: 355px;
+  }
+
+  .benefit-title {
+    margin-left: 0;
+    margin-bottom: 30px;
+  }
+
+  .calculator {
+    top: auto;
+    bottom: 15px;
+    padding-top: 135px;
+  }
+
+  .rent-price {
+    margin-left: 0;
+  }
+
+  .rent-price-line {
+    max-width: 100%;
+    height: 1px;
+    background: #000000;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .rent-price-btn {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 335px;
+  }
+
+  .iphone-img {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  .telegram-cards-wrapper {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .telegram-card {
+    justify-content: center;
+  }
+
+  .telegram-card-content {
+    min-width: 471px;
+  }
+
+  .reviews-title {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .reviews-wrapper {
+    flex-direction: column;
+  }
+
+  .gallery-top-wrapper {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .gallery-thumbs {
+    order: 0;
+    margin-bottom: 30px;
+  }
+
+  .gallery-thumbs .swiper-wrapper {
+    align-items: center;
+  }
+
+  .slider-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .swiper-button-next {
+    right: 0;
+    left: auto;
+  }
+
+  .attachment-content {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+  }
+
+  .main-footer {
+    padding: 30px 0px;
+  }
+
+  .footer-top {
+    margin-bottom: 0;
+  }
+
+  .footer-line {
+    margin: 24px auto;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    opacity: 0.15;
+  }
+
+  .footer-logo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+  }
+
+  .footer-text {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-copy {
+    margin-bottom: 28px;
+  }
+
+  .footer-conditions {
+    margin-bottom: 10px;
+  }
+
+  .footer-politics {
+    margin-bottom: 18px;
+  }
+}
+
+/* 768 > 576  */
+
+@media (max-width: 767.98px) {
+  .header-logo {
+    width: 106px;
+  }
+
+  .btn-burger {
+    width: 21px;
+    height: 21px;
+    left: 8px;
+  }
+
+  .btn-burger span {
+    top: 7px;
+    width: 21px;
+  }
+
+  .btn-burger span::before {
+    top: -7px;
+    width: 21px;
+  }
+
+  .btn-burger span::after {
+    bottom: -7px;
+    width: 21px;
+  }
+
+  .main-title {
+    margin-bottom: 30px;
+  }
+
+  .popular-card-body {
+    padding: 10px;
+    padding-bottom: 0;
+  }
+
+  .card-body-header {
+    margin-bottom: 10px;
+  }
+
+  .popular-card-body .card-title {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .card-body-header .toggle-heart-label svg {
+    width: 16px;
+  }
+
+  .popular-card-body .card-text {
+    font-size: 12px;
+    line-height: 16px;
+    min-height: auto;
+    margin-bottom: 12px;
+  }
+
+  .popular-card .card-footer {
+    padding: 10px;
+    padding-top: 0;
+  }
+
+  .popular-card .card-text-small {
+    font-size: 10px;
+    line-height: 13px;
+  }
+
+  .card-img-top {
+    border-radius: 6px 0px 0px 6px;
+  }
+
+  .telegram-card-content {
+    max-width: 415px;
+    min-width: 415px;
+  }
+
+  .attachment-content {
+    padding: 30px 20px;
+  }
+
+  .attachment-title {
+    text-align: center;
+  }
+
+  .attachment-text {
+    text-align: center;
+  }
+
+  .attachment-links {
+    justify-content: center;
+  }
+}
+
+/* 576 > 320  */
+
+@media (max-width: 575.98px) {
+  .btn {
+    padding: 12px 36px;
+    font-size: 14px;
+  }
+
+  .modal-city-selection .city-selection-list .city-selection-list-item {
+    flex-direction: column;
+  }
+
+  .modal-city-selection .city-selection-list .city-selection-list-item span:first-child {
+    margin-bottom: 5px;
+  }
+
+  .search-rent .form-select {
+    font-size: 12px;
+    line-height: 11px;
+  }
+
+  .rooms-checks .btn-check-label {
+    font-size: 12px;
+    line-height: 11px;
+  }
+
+  .form-price-title {
+    font-size: 12px;
+    line-height: 11px;
+  }
+
+  .search-rent .form-control {
+    font-size: 12px;
+    line-height: 11px;
+  }
+
+  .search-rent .form-control::placeholder {
+    font-size: 12px;
+    line-height: 11px;
+  }
+
+  .btn-search-rent {
+    padding: 13px 115px;
+  }
+
+  .principles-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .principles-text:first-of-type {
+    margin-bottom: 20px;
+  }
+
+  .principles-text:last-of-type {
+    margin-bottom: 24px;
+  }
+
+  .principle-item {
+    margin-bottom: 20px;
+  }
+
+  .principle-item-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .principle-item-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .benefit-card-body {
+    padding: 16px 20px;
+  }
+
+  .benefit-card-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .benefit-card-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .calculator {
+    bottom: -5px;
+  }
+
+  .rent-price-text {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 140px;
+  }
+
+  .rent-price-sum {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .rent-price-line {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .rent-price:last-of-type {
+    margin-bottom: 40px;
+  }
+
+  .popular-ads-title {
+    margin-bottom: 24px;
+  }
+
+  .popular-cards-wrapper {
+    margin-bottom: 40px;
+  }
+
+  .card-img-top {
+    height: 100%;
+    width: 100%;
+  }
+
+  .card-body-header {
+    margin-bottom: 0;
+    align-items: flex-start;
+  }
+
+  .search-map-content {
+    padding: 40px 16px;
+    max-width: 295px;
+  }
+
+  .search-map-title {
+    line-height: 32px;
+    margin-bottom: 18px;
+  }
+
+  .search-map-text {
+    margin-bottom: 32px;
+  }
+
+  .telegram-title {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  .telegram-card {
+    margin-bottom: 24px;
+  }
+
+  .telegram-card-img-wrapper {
+    width: 54px;
+    height: 54px;
+  }
+
+  .telegram-card-img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .telegram-card-img img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .telegram-card-content {
+    max-width: 265px;
+    min-width: 265px;
+  }
+
+  .telegram-card-title {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 4px;
+  }
+
+  .telegram-card-text {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .slider-content-title {
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 14px;
+  }
+
+  .slider-content-stars {
+    margin-bottom: 30px;
+  }
+
+  .slider-content-text {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .attachment-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .footer-logo-img {
+    width: 107px;
+  }
+}
+
+@media (max-width: 320.98px) {
+  .search-map-content {
+    max-width: 280px;
+  }
+
+  .telegram-card-content {
+    max-width: 210px;
+    min-width: 210px;
+  }
+
+  .attachment-link-img {
+    width: 130px;
+    height: 40px;
+  }
+}
