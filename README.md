@@ -1,1 +1,1 @@
-# fairrent
+https://jackmoskva.github.io/fairrent/
