@@ -1,6 +1,8 @@
 const selectPrice = new CustomSelect('#selectPrice');
 const selectPriceFrom = new CustomSelect('#selectPriceFrom');
 const selectPriceBefore = new CustomSelect('#selectPriceBefore');
+const selectPriceFromM = new CustomSelect('#selectPriceFromM');
+const selectPriceBeforeM = new CustomSelect('#selectPriceBeforeM');
 
 
 $(function () {
