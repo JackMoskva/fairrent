@@ -12,9 +12,6 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
   <link rel="stylesheet" href="css/fonts.css">
-  <link rel="stylesheet" href="css/chosen.min.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/custom_select.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/media.css">
   <!-- End Style -->
@@ -41,9 +38,9 @@
                 <a class="nav-link" href="document.html">Документация</a>
               </li>
             </ul>
-            <button type="button" class="city-selection" data-bs-toggle="modal" data-bs-target="#citySelectionModal">
+            <!-- <button type="button" class="city-selection" data-bs-toggle="modal" data-bs-target="#citySelectionModal">
               Москва
-            </button>
+            </button> -->
             <a href="#" class="like-btn d-none d-lg-flex">
               <svg width="22" height="20" viewBox="0 0 22 20" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -53,9 +50,98 @@
               <span class="badge">6</span>
             </a>
             <a href="new-apartment.html" class="btn header-btn-rent">Сдать квартиру</a>
-            <button type="button" class="btn-input" data-bs-toggle="modal" data-bs-target="#enterRegModal">
-              Войти
-            </button>
+            <div class="dropdown my-office-drop d-none d-lg-block">
+              <a class="btn btn-my-office dropdown-toggle" href="#" role="button" id="myOfficeDrop"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="img/user-icon.png" class="btn-my-office-img" alt="User">
+                <span class="btn-my-office-text">Мой кабинет</span>
+                <svg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.99999 5C3.85661 5 3.71325 4.93998 3.60394 4.82018L0.164113 1.0486C-0.0547045 0.808678 -0.0547045 0.419689 0.164113 0.179867C0.382843 -0.0599556 0.737548 -0.0599556 0.956383 0.179867L3.99999 3.51717L7.04361 0.179983C7.26243 -0.0598391 7.61709 -0.0598391 7.83581 0.179983C8.05473 0.419806 8.05473 0.808794 7.83581 1.04871L4.39603 4.8203C4.28667 4.94011 4.14331 5 3.99999 5Z"
+                    fill="black" />
+                </svg>
+              </a>
+
+              <ul class="dropdown-menu my-office-drop-menu" aria-labelledby="myOfficeDrop">
+                <li>
+                  <a class="dropdown-item" href="favorites.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12.8962 1.54918C11.3946 1.54115 9.96719 2.2006 8.99998 3.34915C8.03882 2.19275 6.60741 1.53143 5.10377 1.54918C2.28503 1.54918 0 3.8342 0 6.65295C0 11.4834 8.43037 16.1998 8.77215 16.3821C8.91005 16.4742 9.0899 16.4742 9.22785 16.3821C9.56963 16.1998 18 11.5517 18 6.65295C18 3.8342 15.7149 1.54918 12.8962 1.54918ZM8.99998 15.4707C7.67846 14.696 0.911394 10.572 0.911394 6.65295C0.911394 4.33757 2.78839 2.46053 5.10381 2.46053C6.52171 2.4419 7.84863 3.15709 8.61266 4.35165C8.76779 4.56557 9.06701 4.61324 9.28092 4.45807C9.32179 4.42841 9.35772 4.39252 9.38734 4.35165C10.6545 2.41378 13.2527 1.87003 15.1905 3.13716C16.3769 3.91288 17.0909 5.23548 17.0886 6.6529C17.0886 10.6175 10.3215 14.7188 8.99998 15.4707Z"
+                        fill="#121111" />
+                    </svg>
+                    <span>Избранное</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="favorites-full.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.9969 3.3C15.9977 3.22084 15.9629 3.1446 15.9001 3.0879L12.491 0.0879C12.4269 0.03225 12.34 0.001575 12.25 0.0027V0H2.02273C1.45788 0 1 0.402938 1 0.9V17.1C1 17.5971 1.45788 18 2.02273 18H14.9773C15.5421 18 16 17.5971 16 17.1V3.3H15.9969ZM12.5909 1.0242L14.8361 3H12.9318C12.7436 3 12.5909 2.86568 12.5909 2.7V1.0242ZM15.3182 17.1C15.3182 17.2657 15.1655 17.4 14.9773 17.4H2.02273C1.83446 17.4 1.68182 17.2657 1.68182 17.1V0.9C1.68182 0.734325 1.83446 0.6 2.02273 0.6H11.9091V2.7C11.9091 3.19706 12.367 3.6 12.9318 3.6H15.3182V17.1Z"
+                        fill="black" />
+                      <path
+                        d="M4.9 8.40015C4.40294 8.40015 4 8.80308 4 9.30015C4 9.79721 4.40294 10.2001 4.9 10.2001C5.39706 10.2001 5.8 9.79721 5.8 9.30015C5.8 8.80308 5.39706 8.40015 4.9 8.40015ZM4.9 9.60015C4.73432 9.60015 4.6 9.46582 4.6 9.30015C4.6 9.13447 4.73432 9.00015 4.9 9.00015C5.06567 9.00015 5.2 9.13447 5.2 9.30015C5.2 9.46582 5.06567 9.60015 4.9 9.60015Z"
+                        fill="black" />
+                      <path d="M13.5 9H7.5V9.6H13.5V9Z" fill="black" />
+                      <path
+                        d="M4.9 5.1001C4.40294 5.1001 4 5.50304 4 6.0001C4 6.49716 4.40294 6.9001 4.9 6.9001C5.39706 6.9001 5.8 6.49716 5.8 6.0001C5.8 5.50304 5.39706 5.1001 4.9 5.1001ZM4.9 6.3001C4.73432 6.3001 4.6 6.16577 4.6 6.0001C4.6 5.83442 4.73432 5.7001 4.9 5.7001C5.06567 5.7001 5.2 5.83442 5.2 6.0001C5.2 6.16577 5.06567 6.3001 4.9 6.3001Z"
+                        fill="black" />
+                      <path d="M13.5 5.69995H7.5V6.29995H13.5V5.69995Z" fill="black" />
+                      <path
+                        d="M4.9 11.7002C4.40294 11.7002 4 12.1031 4 12.6002C4 13.0973 4.40294 13.5002 4.9 13.5002C5.39706 13.5002 5.8 13.0973 5.8 12.6002C5.8 12.1031 5.39706 11.7002 4.9 11.7002ZM4.9 12.9002C4.73432 12.9002 4.6 12.7659 4.6 12.6002C4.6 12.4345 4.73432 12.3002 4.9 12.3002C5.06567 12.3002 5.2 12.4345 5.2 12.6002C5.2 12.7659 5.06567 12.9002 4.9 12.9002Z"
+                        fill="black" />
+                      <path d="M13.5 12.3H7.5V12.9H13.5V12.3Z" fill="black" />
+                    </svg>
+                    <span>Мои обьявления</span>
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="new-apartment.html">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M17.4607 10.9732L15.8062 9.6795C15.8279 9.47999 15.8452 9.24676 15.8452 9C15.8452 8.75324 15.8272 8.52001 15.8062 8.3205L17.4622 7.02601C17.7697 6.78301 17.8544 6.35175 17.6579 5.99252L15.9374 3.01577C15.7492 2.67304 15.3269 2.51627 14.9422 2.65802L12.9899 3.44176C12.6164 3.17176 12.2242 2.94377 11.8184 2.76152L11.5214 0.690785C11.4727 0.297 11.1307 0 10.7264 0H7.27643C6.87217 0 6.53017 0.297 6.48218 0.683262L6.18444 2.76152C5.79143 2.93927 5.4052 3.16354 5.01444 3.44254L3.05694 2.65655C2.6827 2.5103 2.25668 2.66481 2.06919 3.00829L0.346429 5.98954C0.14319 6.33305 0.22644 6.77855 0.54144 7.02752L2.19593 8.32054C2.16967 8.57405 2.15694 8.79377 2.15694 9.00004C2.15694 9.2063 2.1697 9.42602 2.19445 9.67954L0.538452 10.9748C0.231679 11.2178 0.147655 11.649 0.343405 12.0082L2.06392 14.985C2.25067 15.327 2.67215 15.483 3.05915 15.3427L5.01142 14.559C5.38492 14.8283 5.77793 15.0563 6.18367 15.2392L6.48067 17.3092C6.52943 17.703 6.87143 18 7.27565 18H10.7256C11.1299 18 11.4719 17.703 11.5199 17.3167L11.8176 15.2392C12.2106 15.0615 12.5969 14.8372 12.9876 14.5582L14.9451 15.3442C15.3179 15.489 15.7454 15.336 15.9329 14.9925L17.6624 12.0007C17.8537 11.6498 17.7697 11.2185 17.4607 10.9732ZM17.0069 11.6332L15.2204 14.6467L13.0732 13.7842C12.9517 13.7355 12.8137 13.7543 12.7087 13.8322C12.2437 14.1802 11.7944 14.442 11.3339 14.6302C11.2109 14.6805 11.1232 14.7922 11.1044 14.9242L10.7257 17.25L7.22542 17.2103L6.89765 14.925C6.87814 14.793 6.79117 14.6813 6.66815 14.631C6.1889 14.4345 5.72765 14.1667 5.29639 13.8352C5.22963 13.7835 5.14863 13.7572 5.06763 13.7572C5.02038 13.7572 4.97313 13.7655 4.92739 13.7842L2.71863 14.6174L0.99812 11.6407C0.98237 11.6114 0.985358 11.5777 1.00336 11.5635L2.82361 10.1407C2.92711 10.0597 2.98111 9.92921 2.96462 9.79871C2.92486 9.48445 2.90686 9.2302 2.90686 8.99996C2.90686 8.76973 2.9256 8.51622 2.96462 8.20121C2.98111 8.06998 2.92711 7.94021 2.82361 7.85921L0.994429 6.3675L2.78093 3.35401L4.92817 4.2165C5.0504 4.266 5.18765 4.24726 5.2934 4.16851C5.75764 3.81976 6.20764 3.55876 6.66815 3.3705C6.79117 3.31949 6.87814 3.20776 6.89692 3.07649L7.27643 0.749988L10.7774 0.790488L11.1044 3.07649C11.1239 3.2085 11.2109 3.32023 11.3339 3.3705C11.8124 3.56625 12.2737 3.834 12.7057 4.16626C12.8114 4.24726 12.9502 4.26677 13.0739 4.2165L15.2827 3.38326L17.0032 6.36001C17.019 6.38926 17.016 6.42227 16.998 6.43651L15.1777 7.85925C15.0742 7.94025 15.0202 8.07001 15.0367 8.20125C15.0652 8.42924 15.0945 8.703 15.0945 9C15.0945 9.29774 15.0652 9.57076 15.0367 9.79875C15.0202 9.92925 15.0742 10.0597 15.1777 10.1407L16.9957 11.5627C17.0152 11.5785 17.0189 11.6123 17.0069 11.6332Z"
+                        fill="black" />
+                      <path
+                        d="M9.00062 5.25C6.93287 5.25 5.25061 6.93227 5.25061 9.00002C5.25061 11.0678 6.93287 12.75 9.00062 12.75C11.0684 12.75 12.7506 11.0678 12.7506 9.00002C12.7506 6.93227 11.0684 5.25 9.00062 5.25ZM9.00062 12C7.34613 12 6.00063 10.6545 6.00063 9.00002C6.00063 7.34553 7.34613 6.00003 9.00062 6.00003C10.6551 6.00003 12.0006 7.34553 12.0006 9.00002C12.0006 10.6545 10.6551 12 9.00062 12Z"
+                        fill="black" />
+                    </svg>
+                    <span>Настройки</span>
+                  </a>
+                </li>
+                <li>
+                  <span class="dropdown-divider"></span>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g>
+                        <path
+                          d="M10.125 15.75H7.125C6.918 15.75 6.75 15.582 6.75 15.375C6.75 15.168 6.918 15 7.125 15H10.125C10.7452 15 11.25 14.4952 11.25 13.875V10.125C11.25 9.918 11.418 9.75 11.625 9.75C11.832 9.75 12 9.918 12 10.125V13.875C12 14.9085 11.1592 15.75 10.125 15.75Z"
+                          fill="black" />
+                        <path
+                          d="M17.625 8.25001H10.125C9.918 8.25001 9.75 8.082 9.75 7.875C9.75 7.668 9.918 7.5 10.125 7.5H17.625C17.832 7.5 18 7.668 18 7.875C18 8.082 17.832 8.25001 17.625 8.25001Z"
+                          fill="black" />
+                        <path
+                          d="M6 18C5.835 18 5.67375 17.9722 5.5215 17.9183L1.029 16.4205C0.414 16.2157 0 15.6442 0 15V1.5C0 0.67275 0.67275 0 1.5 0C1.6665 0 1.8285 0.02775 1.97925 0.0825L6.471 1.5795C7.086 1.7835 7.5 2.355 7.5 3V16.5C7.5 17.3272 6.82725 18 6 18ZM1.5 0.75C1.086 0.75 0.75 1.08675 0.75 1.5V15C0.75 15.321 0.957 15.606 1.266 15.7095L5.766 17.2095C6.258 17.3842 6.75 16.9905 6.75 16.5V3C6.75 2.67825 6.543 2.39325 6.234 2.29125L1.734 0.79125C1.65675 0.7635 1.578 0.75 1.5 0.75Z"
+                          fill="black" />
+                        <path
+                          d="M11.625 6C11.418 6 11.25 5.832 11.25 5.625V1.875C11.25 1.25475 10.7452 0.75 10.125 0.75H1.5C1.293 0.75 1.125 0.582 1.125 0.375C1.125 0.168 1.293 0 1.5 0H10.125C11.1592 0 12 0.8415 12 1.875V5.625C12 5.832 11.832 6 11.625 6Z"
+                          fill="black" />
+                        <path
+                          d="M14.6249 11.2499C14.5289 11.2499 14.4329 11.2132 14.3594 11.1404C14.2132 10.9942 14.2132 10.7564 14.3594 10.6102L17.094 7.87566L14.3594 5.14116C14.2132 4.99491 14.2132 4.75716 14.3594 4.61091C14.5057 4.46466 14.7434 4.46466 14.8897 4.61091L17.8897 7.61091C18.036 7.75716 18.036 7.99491 17.8897 8.14116L14.8897 11.1412C14.8169 11.2132 14.7209 11.2499 14.6249 11.2499Z"
+                          fill="black" />
+                      </g>
+                      <defs>
+                        <clipPath>
+                          <rect width="18" height="18" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    <span>Выйти</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
             <div class="lang-wrapper d-none d-lg-block">
               <a href="#" class="lang lang-ru">RU</a>
               <span class="slash">|</span>
@@ -92,9 +178,10 @@
         </div>
       </div>
       <div class="collapse navbar-collapse" id="navbarTogglerMenu">
-        <button type="button" class="btn-input" data-bs-toggle="modal" data-bs-target="#enterRegModal">
-          Войти
-        </button>
+        <a class="btn btn-my-office btn-my-office-mobile" href="#">
+          <img src="img/user-icon.png" class="btn-my-office-img" alt="User">
+          <span class="btn-my-office-text">Мой кабинет</span>
+        </a>
         <div class="city-selection">
           Москва
           <button type="button" class="city-selection-btn" data-bs-toggle="modal" data-bs-target="#citySelectionModal">
@@ -234,11 +321,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -355,11 +442,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -447,11 +534,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -545,11 +632,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -588,11 +675,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -624,11 +711,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -717,11 +804,11 @@
         <div class="modal-footer">
           <p class="modal-policy-text">
             При входе, вы принимаете условия
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Пользовательского соглашения
             </a>
             и
-            <a href="#" class="modal-policy-link">
+            <a href="document.html" class="modal-policy-link">
               Политики конфиденциальности
             </a>
           </p>
@@ -731,861 +818,161 @@
   </div>
   <!-- End Modals Enter -->
 
-  <!-- Main Banner -->
-  <section class="main-banner">
+  <!-- FAQ -->
+  <section class="faq-section">
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1 class="main-title">
-            Ваша аренда недвижимости — в наших руках
-          </h1>
+          <h2 class="catalog-title">
+            Часто задаваемые вопросы
+          </h2>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-10">
-          <form class="search-rent">
-            <div class="select-apart-wrapper">
-              <select class="main-city-chosen-select" multiple="" tabindex="-1">
-                <!-- <option value=""></option> -->
-                <option value="apartment" selected>
-                  Квартира
-                </option>
-                <option value="room">
-                  Комната
-                </option>
-                <option value="house">
-                  Дом
-                </option>
-                <option value="part-house">
-                  Часть дома
-                </option>
-                <option value="townhouse">
-                  Таунхаус
-                </option>
-                <option value="plot">
-                  Участок
-                </option>
-                <option value="garage">
-                  Гараж или машиноместо
-                </option>
-                <option value="commercial">
-                  Коммерческая недвижимость
-                </option>
-              </select>
-            </div>
-            <div class="rooms-checks">
-              <div class="form-check">
-                <input type="checkbox" class="btn-check" id="btnCheckStudio">
-                <label class="btn-check-label btn-check-label-studio" for="btnCheckStudio">
-                  Студия
-                </label>
-              </div>
-              <span class="check-line">|</span>
-              <div class="form-check">
-                <input type="checkbox" class="btn-check" id="btnCheckOne">
-                <label class="btn-check-label" for="btnCheckOne">
-                  1
-                </label>
-              </div>
-              <span class="check-line">|</span>
-              <div class="form-check">
-                <input type="checkbox" class="btn-check" id="btnCheckTwo">
-                <label class="btn-check-label" for="btnCheckTwo">
-                  2
-                </label>
-              </div>
-              <span class="check-line">|</span>
-              <div class="form-check">
-                <input type="checkbox" class="btn-check" id="btnCheckThree">
-                <label class="btn-check-label" for="btnCheckThree">
-                  3
-                </label>
-              </div>
-              <span class="check-line">|</span>
-              <div class="form-check">
-                <input type="checkbox" class="btn-check" id="btnCheckFour">
-                <label class="btn-check-label btn-check-label-four" for="btnCheckFour">
-                  4+
-                </label>
-              </div>
-            </div>
-            <div class="select d-none d-lg-block" id="selectPrice">
-              <div class="select__backdrop" data-select="backdrop"></div>
-              <button class="select__trigger form-select" type="button" data-select="trigger">
-                Цена
+      <div class="faq-wrapper">
+        <div class="accordion a-faq" id="faqAccordion">
+          <!-- Accordion 1 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading1">
+              <button class="accordion-button a-btn-faq" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
+                Откуда вы берете объявления?
               </button>
-              <div class="select__dropdown select-dropdown-price">
-                <ul class="select__items">
-                  <li class="select__item" data-select="item">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="10 000" aria-describedby="basic-addon1">
-                      <span class="input-group-text" id="basic-addon1">&#8381;</span>
-                    </div>
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="60 000" aria-describedby="basic-addon2">
-                      <span class="input-group-text" id="basic-addon2">&#8381;</span>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="form-price-wrapper d-flex d-lg-none">
-              <h6 class="form-price-title">Цена</h6>
-              <span class="form-price-line">|</span>
-
-              <!-- Select From -->
-              <div class="select" id="selectPriceFrom">
-                <div class="select__backdrop" data-select="backdrop"></div>
-                <button class="select__trigger form-select" type="button" data-select="trigger">
-                  От
-                </button>
-                <div class="select__dropdown">
-                  <ul class="select__items">
-                    <li class="select__item" data-select="item">
-                      1000
-                    </li>
-                    <li class="select__item" data-select="item">
-                      2000
-                    </li>
-                    <li class="select__item" data-select="item">
-                      3000
-                    </li>
-                    <li class="select__item" data-select="item">
-                      4000
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Select From -->
-
-              <span class="form-price-line">|</span>
-
-              <!-- Select Before -->
-              <div class="select" id="selectPriceBefore">
-                <div class="select__backdrop" data-select="backdrop"></div>
-                <button class="select__trigger form-select" type="button" data-select="trigger">
-                  До
-                </button>
-                <div class="select__dropdown">
-                  <ul class="select__items">
-                    <li class="select__item" data-select="item">
-                      50000
-                    </li>
-                    <li class="select__item" data-select="item">
-                      60000
-                    </li>
-                    <li class="select__item" data-select="item">
-                      70000
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <!-- End Select Before -->
-
-            </div>
-            <div class="select-address-wrapper">
-              <select data-placeholder="Город, регион или Россия..." class="main-city-chosen-select" multiple=""
-                tabindex="-1">
-                <option value=""></option>
-                <option value="Moskow">
-                  <span>Москва,</span>
-                  <span>Московская область</span>
-                </option>
-                <option value="Spb">
-                  <span>Санкт-Петербург,</span>
-                  <span>Ленинградская область</span>
-                </option>
-                <option value="Severodvinsk">
-                  <span>Северодвинск,</span>
-                  <span>Архангельская область</span>
-                </option>
-                <option value="Habarovsk">
-                  <span>Хабаровск,</span>
-                  <span>Хабаровский край</span>
-                </option>
-              </select>
-            </div>
-          </form>
-        </div>
-        <div class="col-lg-2">
-          <button class="btn btn-search-rent">Найти</button>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Main Banner -->
-
-  <!-- Work Principles -->
-  <section class="principles">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="principles-title">
-            Принципы работы Fairrent
-          </h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-5">
-          <p class="principles-text mb-3 mb-sm-4">
-            Мы воплотили эту мечту в реальность за счёт <strong>длительного срока аренды</strong> (от 4 до 8 лет) и
-            единоразовой оплаты за весь период.
-          </p>
-          <p class="principles-text">
-            Больше вам не требуется <strong>брать на себя ипотечные обязательства или переплачивать за аренду</strong>,
-            что бы забыть о
-            вопросе жилья, все что вам теперь нужно - это небольшой <strong>единоразовый платёж и платформа
-              Fairrent</strong>
-          </p>
-          <a href="catalog.html" class="btn d-none d-lg-inline-block">Выбрать недвижимость</a>
-        </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-1 row-cols-lg-2">
-            <div class="col">
-              <div class="principle-item principle-item-one">
-                <div class="principle-item-img-wrapper">
-                  <img src="img/circle-green.png" class="principle-item-img" alt="Icon">
-                </div>
-                <div class="principle-item-content">
-                  <h3 class="principle-item-title">Экономия</h3>
-                  <p class="principle-item-text">
-                    Арендуйте выбранную недвижимость через платформу Fairrent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="principle-item principle-item-two">
-                <div class="principle-item-img-wrapper">
-                  <img src="img/circle-green.png" class="principle-item-img" alt="Icon">
-                </div>
-                <div class="principle-item-content">
-                  <h3 class="principle-item-title">Экономия</h3>
-                  <p class="principle-item-text">
-                    Арендуйте выбранную недвижимость через платформу Fairrent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="principle-item principle-item-three">
-                <div class="principle-item-img-wrapper">
-                  <img src="img/circle-green.png" class="principle-item-img" alt="Icon">
-                </div>
-                <div class="principle-item-content">
-                  <h3 class="principle-item-title">Экономия</h3>
-                  <p class="principle-item-text">
-                    Арендуйте выбранную недвижимость через платформу Fairrent.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="principle-item principle-item-four">
-                <div class="principle-item-img-wrapper">
-                  <img src="img/circle-green.png" class="principle-item-img" alt="Icon">
-                </div>
-                <div class="principle-item-content">
-                  <h3 class="principle-item-title">Экономия</h3>
-                  <p class="principle-item-text">
-                    Арендуйте выбранную недвижимость через платформу Fairrent.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Work Principles -->
-
-  <!-- Benefit Calculator -->
-  <section class="benefit">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 order-1 order-lg-0">
-          <div class="card benefit-card">
-            <img src="img/benefit.jpg" class="card-img-top" alt="Card Img">
-            <div class="card-body benefit-card-body">
-              <h5 class="benefit-card-title">
-                Двухкомнатная квартира от собственника
-              </h5>
-              <p class="card-text benefit-card-text">
-                Москва, Рязановское шоссе
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-7 order-0 order-lg-1">
-          <h2 class="benefit-title">
-            Калькулятор выгоды
-          </h2>
-        </div>
-      </div>
-    </div>
-    <div class="calculator">
-      <div class="container-lg">
-        <div class="row">
-          <div class="offset-0 offset-lg-5 col-lg-7">
-            <div class="rent-price">
-              <p class="rent-price-text">
-                Стоимость при самостоятельной аренде за 5 лет
-              </p>
-              <p class="rent-price-sum">1 500 000 ₽</p>
-            </div>
-            <div class="rent-price-line"></div>
-            <div class="rent-price">
-              <p class="rent-price-text">
-                Стоимость при при аренде на Fairrent за 5 лет
-              </p>
-              <p class="rent-price-sum rent-price-sum-green">750 000 ₽</p>
-            </div>
-            <a href="new-apartment.html" class="btn rent-price-btn">
-              Рассчитать свою квартиру
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Benefit Calculator -->
-
-  <!-- Popular Ads -->
-  <section class="popular-ads">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="popular-ads-title">
-            Популярные обьявления
-          </h2>
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 popular-cards-wrapper">
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop1.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">25 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardOne" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardOne" class="toggle-heart-label" aria-label="like" tabindex="0"
-                        data-title="">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Двухкомнатная квартира от собственника
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    Сегодня в 12:50 - Москва, Рязановское ш.
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop2.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">15 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardTwo" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardTwo" class="toggle-heart-label" aria-label="like">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Большая изолированная комната с прекрасным видом
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    Вчера в 22:32 - Москва, Славянский бульвар
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop3.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">32 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardThree" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardThree" class="toggle-heart-label" aria-label="like">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Яркая евродвушка
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    8 фев. - Cанкт-Петербург, Калининский р-н
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop4.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">50 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardFour" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardFour" class="toggle-heart-label" aria-label="like">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Яркая евродвушка
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    Сегодня в 12:50 - Москва, Рязановское ш.
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop5.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">28 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardFive" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardFive" class="toggle-heart-label" aria-label="like">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Двухкомнатная квартира от собственника
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    Вчера в 22:32 - Москва, Славянский бульвар
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="popular-card card h-100">
-            <div class="row g-0">
-              <div class="col-5 col-md-12">
-                <img src="img/pop6.jpg" class="card-img-top" alt="Card Image">
-              </div>
-              <div class="col-7 col-md-12">
-                <div class="popular-card-body card-body">
-                  <div class="card-body-header">
-                    <h5 class="card-title">24 000 ₽</h5>
-                    <div class="like-btn heart-btn">
-                      <input id="toggleHeartCardSix" class="toggle-heart" type="checkbox">
-                      <label for="toggleHeartCardSix" class="toggle-heart-label" aria-label="like">
-                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path
-                            d="M15.762 1.89349C13.9268 1.88368 12.1821 2.68968 11 4.09347C9.82523 2.68008 8.07572 1.8718 6.23794 1.89349C2.79281 1.89349 0 4.6863 0 8.13143C0 14.0353 10.3038 19.7998 10.7215 20.0226C10.8901 20.1352 11.1099 20.1352 11.2785 20.0226C11.6962 19.7998 22 14.1188 22 8.13143C22 4.6863 19.2071 1.89349 15.762 1.89349ZM11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="#121111" />
-                          <path
-                            d="M11 18.9087C9.38479 17.9618 1.11393 12.9213 1.11393 8.13143C1.11393 5.30152 3.40803 3.00736 6.23799 3.00736C7.97098 2.9846 9.59278 3.85872 10.5266 5.31874C10.7162 5.58019 11.0819 5.63845 11.3434 5.4488C11.3933 5.41255 11.4372 5.36869 11.4734 5.31874C13.0221 2.95022 16.1977 2.28564 18.5662 3.83436C20.0162 4.78246 20.8889 6.39898 20.886 8.13138C20.8861 12.977 12.6152 17.9897 11 18.9087Z"
-                            fill="transparent" />
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                  <p class="card-text">
-                    Большая изолированная комната с прекрасным видом
-                  </p>
-                </div>
-                <div class="card-footer">
-                  <a href="apartment.html" class="card-text-small stretched-link">
-                    8 фев. - Cанкт-Петербург, Калининский р-н
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="catalog.html" class="btn popular-btn">Смотреть все предложения</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Popular Ads -->
-
-  <!-- Search Map -->
-  <section class="search-map">
-    <div class="container">
-      <div class="search-map-wrapper">
-        <div class="search-map-content">
-          <h2 class="search-map-title">Поиск на карте</h2>
-          <p class="search-map-text">
-            Ищите жильё рядом с работой, парком, родственниками или за городом
-          </p>
-          <a href="catalog.html" class="btn search-map-btn">
-            <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path
-                d="M8.36433 0.492188C5.48939 0.492188 3.15039 2.83118 3.15039 5.70611C3.15039 9.31961 8.36946 15.4922 8.36946 15.4922C8.36946 15.4922 13.5783 9.14191 13.5783 5.70611C13.5783 2.83118 11.2394 0.492188 8.36433 0.492188ZM9.93749 7.23276C9.50371 7.66644 8.93407 7.88333 8.36433 7.88333C7.79469 7.88333 7.22487 7.66644 6.79127 7.23276C5.92381 6.36539 5.92381 4.95401 6.79127 4.08655C7.21132 3.66632 7.77006 3.43488 8.36433 3.43488C8.9586 3.43488 9.51726 3.66641 9.93749 4.08655C10.805 4.95401 10.805 6.36539 9.93749 7.23276Z"
-                fill="white" />
-            </svg>
-            <span>Найти на карте</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Search Map -->
-
-  <!-- Telegram Bot -->
-  <section class="telegram">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="telegram-title">
-            Ваш личный менеджер в Telegram-боте
-          </h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-6 order-1 order-lg-0">
-          <div class="telegram-cards-wrapper">
-            <div class="telegram-card">
-              <div class="telegram-card-img-wrapper">
-                <div class="telegram-card-img">
-                  <img src="img/piggy.png" alt="Piggy">
-                </div>
-              </div>
-              <div class="telegram-card-content">
-                <h5 class="telegram-card-title">Экономия</h5>
-                <p class="telegram-card-text">
-                  Личный менеджер стоит гораздо дешевле риелтора.
+            </h2>
+            <div id="faqCollapse1" class="accordion-collapse a-c-faq collapse show" aria-labelledby="faqHeading1"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
                 </p>
-              </div>
-            </div>
-            <div class="telegram-card">
-              <div class="telegram-card-img-wrapper">
-                <div class="telegram-card-img">
-                  <img src="img/piggy.png" alt="Piggy">
-                </div>
-              </div>
-              <div class="telegram-card-content">
-                <h5 class="telegram-card-title">
-                  Безопасность гарантирована
-                </h5>
-                <p class="telegram-card-text">
-                  Проверим документы собственника и дадим заключение о правомерности сделки.
-                </p>
-              </div>
-            </div>
-            <div class="telegram-card">
-              <div class="telegram-card-img-wrapper">
-                <div class="telegram-card-img">
-                  <img src="img/piggy.png" alt="Piggy">
-                </div>
-              </div>
-              <div class="telegram-card-content">
-                <h5 class="telegram-card-title">
-                  Внимание к деталям
-                </h5>
-                <p class="telegram-card-text">
-                  Хотите квартиру с белыми стенами, окнами в зеленый двор и чтобы можно было жить с любимым питомцем?
-                </p>
-              </div>
-            </div>
-            <div class="telegram-card telegram-card-last">
-              <div class="telegram-card-img-wrapper">
-                <div class="telegram-card-img">
-                  <img src="img/piggy.png" alt="Piggy">
-                </div>
-              </div>
-              <div class="telegram-card-content">
-                <h5 class="telegram-card-title">
-                  Удобство поиска
-                </h5>
-                <p class="telegram-card-text">
-                  Личный менеджер доступен по телефону, в почте или в любом удобном вам мессенджере.
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
                 </p>
               </div>
             </div>
           </div>
-          <a href="#" class="telegram-bot-btn">
-            Перейти в Тelegram-бот
-          </a>
-        </div>
-        <div class="col-lg-6 order-0 order-lg-1">
-          <img src="img/iphone.png" class="iphone-img d-none d-md-block" alt="iPhone X">
-          <img src="img/iphone-mb.png" class="iphone-img d-block d-md-none" alt="iPhone X">
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Telegram Bot -->
-
-  <!-- Reviews -->
-  <section class="reviews">
-    <div class="container">
-      <div class="row">
-        <div class="col">
-          <h2 class="reviews-title">Отзывы</h2>
-        </div>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="reviews-wrapper">
-        <!-- Swiper -->
-        <div class="gallery-top-wrapper">
-          <div class="swiper-container gallery-top">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Анастасия Иванова
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Иван Петров
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Вова Сидоров
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Анастасия Иванова
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Иван Петров
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="slider-content">
-                  <h3 class="slider-content-title">
-                    Вова Сидоров
-                  </h3>
-                  <div class="slider-content-stars">
-                    <span class="stars">
-                      <img src="img/stars.png" alt="Stars">
-                    </span>
-                  </div>
-                  <p class="slider-content-text">
-                    Отличный сервис! Нашла жилье в новым жилом комплексе, о котором давно мечтала. Поиски заняли ровно
-                    неделю. Сняла квартиру без комиссии, с новым ремонтом по приемлемой цене. Одним словом, всё очень
-                    понравилось.
-                  </p>
-                </div>
+          <!-- Accordion 2 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading2">
+              <button class="accordion-button a-btn-faq collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
+                Вы проверяете, насколько квартира соответствует описанию и фотографиям?
+              </button>
+            </h2>
+            <div id="faqCollapse2" class="accordion-collapse a-c-faq collapse" aria-labelledby="faqHeading2"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
+                </p>
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
+                </p>
               </div>
             </div>
-            <div class="swiper-button-next swiper-button-white"></div>
-            <div class="swiper-button-prev swiper-button-white"></div>
           </div>
-        </div>
-        <div class="swiper-container gallery-thumbs">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="img/rev1.jpg" alt="Slide Images">
+          <!-- Accordion 3 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading3">
+              <button class="accordion-button a-btn-faq collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
+                Как вы проверяете квартиры?
+              </button>
+            </h2>
+            <div id="faqCollapse3" class="accordion-collapse a-c-faq collapse" aria-labelledby="faqHeading3"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
+                </p>
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
+                </p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="img/rev2.jpg" alt="Slide Images">
+          </div>
+          <!-- Accordion 4 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading4">
+              <button class="accordion-button a-btn-faq collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
+                Что такое автоматическая проверка?
+              </button>
+            </h2>
+            <div id="faqCollapse4" class="accordion-collapse a-c-faq collapse" aria-labelledby="faqHeading4"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
+                </p>
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
+                </p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="img/rev3.jpg" alt="Slide Images">
+          </div>
+          <!-- Accordion 5 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading5">
+              <button class="accordion-button a-btn-faq collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse5" aria-expanded="false" aria-controls="faqCollapse5">
+                Срок действия подписки еще не истек, но доступ уже пропал. Почему?
+              </button>
+            </h2>
+            <div id="faqCollapse5" class="accordion-collapse a-c-faq collapse" aria-labelledby="faqHeading5"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
+                </p>
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
+                </p>
+              </div>
             </div>
-            <div class="swiper-slide">
-              <img src="img/rev1.jpg" alt="Slide Images">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/rev2.jpg" alt="Slide Images">
-            </div>
-            <div class="swiper-slide">
-              <img src="img/rev3.jpg" alt="Slide Images">
+          </div>
+          <!-- Accordion 6 -->
+          <div class="accordion-item a-i-faq">
+            <h2 class="accordion-header a-h-faq" id="faqHeading6">
+              <button class="accordion-button a-btn-faq collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#faqCollapse6" aria-expanded="false" aria-controls="faqCollapse6">
+                Как вы проверяете квартиры?
+              </button>
+            </h2>
+            <div id="faqCollapse6" class="accordion-collapse a-c-faq collapse" aria-labelledby="faqHeading6"
+              data-bs-parent="#faqAccordion">
+              <div class="accordion-body a-b-faq">
+                <p class="faq-text">
+                  Сначала мы проверяем телефон по внутренней базе риелторов. Если его там нет, идем дальше.
+                  Убеждаемся, что квартиру сдает именно собственник. Для этого мы звоним по указанному номеру и задаем
+                  ряд проверочных вопросов. Если все хорошо, объявление попадает на сайт с пометкой «Проверено» (зеленый
+                  кружок в правом нижнем углу).
+                </p>
+                <p class="faq-text">
+                  При малейших подозрениях модератор запрашивает данные свидетельства о собственности на квартиру.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Reviews -->
-
-  <!-- Attachment -->
-  <section class="attachment">
-    <div class="container">
-      <div class="attachment-wrapper">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="attachment-content">
-              <h2 class="attachment-title">
-                С приложением искать жилье становится ещё удобнее
-              </h2>
-              <p class="attachment-text">
-                Скачайте наше приложение
-              </p>
-              <div class="attachment-links">
-                <a href="#" class="attachment-link link-android">
-                  <img src="img/android.png" alt="Android" class="attachment-link-img">
-                </a>
-                <a href="#" class="attachment-link">
-                  <img src="img/apple.png" alt="Apple" class="attachment-link-img">
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="attachment-img-wrapper">
-              <img src="img/attach-phone.png" alt="Phone" class="attachment-img d-none d-md-block">
-              <img src="img/attach-phone-mb.png" alt="Phone" class="attachment-img d-block d-md-none">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End Attachment -->
+  <!-- End FAQ -->
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -1617,13 +1004,13 @@
             <li class="footer-list-item">
               <a href="tel:+71234567890" class="footer-link footer-link-connect footer-link-phone">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g opacity="0.6" clip-path="url(#clip0)">
+                  <g opacity="0.6">
                     <path
                       d="M15.5646 11.7424L13.3317 9.50954C12.5343 8.71209 11.1786 9.0311 10.8596 10.0678C10.6204 10.7855 9.82296 11.1842 9.10526 11.0247C7.51037 10.626 5.35726 8.5526 4.95854 6.87797C4.71931 6.16024 5.19778 5.36279 5.91548 5.12359C6.95216 4.80461 7.27113 3.44895 6.47369 2.65151L4.24084 0.418659C3.60288 -0.139553 2.64595 -0.139553 2.08774 0.418659L0.572591 1.93381C-0.942556 3.5287 0.73208 7.75516 4.48007 11.5032C8.22807 15.2511 12.4545 17.0056 14.0494 15.4106L15.5646 13.8955C16.1228 13.2575 16.1228 12.3006 15.5646 11.7424Z"
                       fill="white" />
                   </g>
                   <defs>
-                    <clipPath id="clip0">
+                    <clipPath>
                       <rect width="16" height="16" fill="white" />
                     </clipPath>
                   </defs>
@@ -1701,25 +1088,12 @@
   </footer>
   <!-- End Footer -->
 
-  <!-- Added To Favorites -->
-  <div class="added-favorites">
-    <p class="added-favorites-text">Добавлено в избранное</p>
-    <div class="added-favorites-line"></div>
-    <a href="#" class="added-favorites-link">Перейти</a>
-  </div>
-  <!-- End Added To Favorites -->
-
   <!-- Scripts -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
   </script>
   <script src="js/burger.js"></script>
-  <script src="js/custom_select.js"></script>
-  <script src="js/select.js"></script>
-  <script src="js/chosen.jquery.min.js"></script>
-  <script src="js/swiper-bundle.min.js"></script>
-  <script src="js/swiper.js"></script>
   <script src="js/main.js"></script>
 </body>
 
